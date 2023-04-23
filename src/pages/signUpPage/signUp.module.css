@@ -1,0 +1,53 @@
+@import '../../global.css';
+
+.container{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    width:50%;
+    color:var(--main_color);
+    margin-bottom: 1.5rem;;
+    font-weight:bold;
+    font-size:x-large;
+    text-align: start;
+}
+
+.mainForm{
+    width:50%;
+}
+
+.input{
+    border: none;
+    background-color: var(--bs-gray-200);
+}
+
+.formLabel{
+    margin-bottom: 0;
+    text-align: start;
+}
+
+.submitBtn{
+    width:100%;
+    border:1px solid var(--main_color);
+    font-weight: bold;
+}
+
+.linkContainer{
+    margin-top: 0.5rem;
+    font-size:small;
+    font-weight: bold;
+    text-align: end;
+    width:50%;
+    color:var(--bs-gray-600);
+    cursor: pointer;
+}
+
+.link{
+    text-decoration: none;
+    color:inherit;
+}
