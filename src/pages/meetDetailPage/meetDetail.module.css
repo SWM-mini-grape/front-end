@@ -1,0 +1,60 @@
+.main{
+    padding:1.5rem;
+}
+
+.header{
+    margin-top: 1rem;
+    display: flex;
+    justify-content:space-between; 
+    align-items: center;
+}
+
+.meetName{
+    font-size:x-large;
+}
+
+.visible{
+    font-size: small;
+    color:var(--bs-gray-500);
+}
+
+.hashTag{
+    background-color: var(--bs-gray-300);
+    font-size: small;
+    padding:0.3rem 0.6rem;
+    border-radius: 0.875rem;
+}
+
+.joinTitle
+.meetTitle{
+    font-size: large;
+    font-weight: bold;
+}
+
+.join{
+    margin-bottom: 2rem;
+}
+
+.joinList{
+    margin-top: 0.75rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.joinElement{
+    display: flex;
+    justify-content: space-between;
+}
+
+.masterBadge{
+    background-color: var(--main_color) !important;
+}
+
+.meetTitle{
+    margin-bottom: 1rem;
+}
+
+.meetCalendar{
+    display: flex;
+    justify-content: center;
+    width:100%;
+}

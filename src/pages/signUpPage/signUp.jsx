@@ -12,13 +12,14 @@ import axios from 'axios';
 */
 function SignUp() {
     const [id, setId]=useInput('');
+    const [nick, setNick]=useState('');
     const [password, setPassword]=useState('');
     const [passwordConfirm, setPasswordConfirm]=useState('');
     const [isPasswordMismatch, setIsPasswordMismatch]=useState(true);
 
     const handleSubmit=useCallback((e)=>{
         e.preventDefault();
-        if(!id.trim() || !password.trim() || !passwordConfirm.trim() || isPasswordMismatch) return;
+        if(!id.trim() || !password.trim() || !passwordConfirm.trim() || !nick.trim() || isPasswordMismatch) return;
         axios.post("SignUp Url", {id, password, passwordConfirm}, {withCredentials:true})
         .then(res=>{console.log(res);})
         .catch(err=>{console.error(err)});
@@ -51,6 +52,11 @@ function SignUp() {
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Stack direction='vertical' gap={2}>
                         <Form.Control type="password" placeholder="비밀번호확인" className={`${styles.input}`} value={passwordConfirm} onChange={onChangePasswordConfirm}/>
+                    </Stack>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Stack direction='vertical' gap={2}>
+                        <Form.Control type="password" placeholder="닉네임" className={`${styles.input}`} value={nick} onChange={setNick}/>
                     </Stack>
                 </Form.Group>
                 <Button className={`${styles.submitBtn}`} style={{backgroundColor:"var(--main_color)", border:"1px solid var(--main-color)"}}as="input" type="submit" value="회원가입"/>

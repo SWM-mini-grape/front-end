@@ -5,19 +5,27 @@ import Stack from 'react-bootstrap/Stack';
 import Button from 'react-bootstrap/Button';
 import useInput from '../../common/useInput';
 import axios from 'axios';
+import { useSelector,useDispatch } from 'react-redux';
+import { setUser } from '../../reducers/user';
 
 /*To Do: 
 1. api url 설정 
 2. 로그인하고 어떻게 처리할지 생각하기
 */
+
 function SignIn() {
+    const dispatch=useDispatch();
+    const {user}=useSelector(state=>state.user);
+    const setUser=(u)=>{
+        dispatch(setUser(u));
+    }
     const [id, setId]=useInput('');
     const [password, setPassword]=useInput('');
     const handleSubmit=useCallback((e)=>{
         e.preventDefault();
         if(id.trim() || password.trim()) return;
         axios.post("login Url", {id,password}, {withCredentials:true})
-        .then(res=>{console.log(res);})
+        .then(res=>{console.log(res)})
         .catch(err=>{console.error(err)});
     })
     return (
