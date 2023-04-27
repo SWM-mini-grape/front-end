@@ -1,12 +1,12 @@
-@import './reset.css';
-@font-face {
+/* @import './reset.css'; */
+/* @font-face {
     font-family: 'Noto Sans KR';
     src:url('./assets/fonts/NotoSansKR-Regular.otf')
 }
 
 * {
     font-family: 'Noto Sans KR', sans-serif;
-}
+} */
 
 :root{
     --main_color:#6D36F0;
@@ -17,3 +17,12 @@
 }
 
 /*font-weight: regular light bold만*/
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("./assets/fonts/Pretendard-Regular.otf") format("otf");
+}
+
+* {
+  font-family: "Pretendard";
+}
